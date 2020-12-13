@@ -1,0 +1,74 @@
+<main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Bienvenue a RestoApp!</h1>
+        <img src="../../assets/resto.jpg"  class="thick-green-border smaller-image" alt="..."><br><br>
+        <p class="ppp">La gestion d’un restaurant est comme celle de toute entreprise. Bien que le secteur de la restauration ait ses spécificités, la base de votre succès passe par une héroïne tapie dans l’ombre : une gestion globale impeccable. </p>
+
+      </div>
+    </div>
+  
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2 style="text-align: center; color: blue;">Simple</h2>
+          <p class="aze">Cette application permet a l'utilisateur la gestion des restaurants d'une façon simple. </p>
+          <img src="../../assets/simple.jpg">
+        </div>
+        <div class="col-md-4">
+          <h2 style="text-align: center; color: blue;">Rapide</h2>
+          <p  class="aze">Réduisez les files d'attente grâce à un processus de commande automatisé rapide et efficace.. </p>
+          <img src="../../assets/rapide.png">
+        </div>
+        <div class="col-md-4">
+          <h2 style="text-align: center; color: blue;">Application Web</h2>
+          <p  class="aze">Commandez sur n'importe quel appareil, du moment que vous disposez d'un navigateur Web..</p>
+          <img src="../../assets/app.png">
+        </div>
+      </div>
+  
+      <hr>
+  
+    </div> <!-- /container -->
+  
+  </main>
+  
+<br>
+<span></span>
+<h1 style="color: red; text-align: center; text-emphasis: inherit;">{{title}}</h1>
+<br><br><br>
+<form>
+  <div class="form-group">chercher votre restaurant ici! <input name="searchname" type="text" [(ngModel)]="searchname" class="form-control"></div>
+  </form>
+
+<div class="row">
+    <app-home-fils *ngFor="let p of ListResto" [resto]="p" [searchnameInput]="searchname"  >
+    </app-home-fils>
+</div>
+
+<br><br><br>
+<footer>
+  <b>Salmene RABHI</b>
+  <address><i>Mnihla,Ariana,Tunis</i><br>
+    
+    <br>
+    
+    <div class="contact_holder">
+      <img class="footer_icon" src="https://menu.app/wp-content/themes/menuapp/img/footer/mail.svg">
+      <p>
+        <i><a class="icon_left" href="salmene.rabhi1@esprit.tn">salmene.rabhi1@esprit.tn</a></i>
+      </p>
+      <br>
+      <img class="footer_icon" src="https://menu.app/wp-content/themes/menuapp/img/footer/phone.svg">
+      <p>
+      <a class="icon_left"  data-icon="phone">90009889</a>
+      </p>
+      
+      </div>
+
+    </address>
+    <br><br><br><br><br><br>
+</footer>

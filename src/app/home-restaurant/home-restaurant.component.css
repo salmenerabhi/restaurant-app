@@ -1,0 +1,45 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+  
+  }
+  .display-3{
+      text-align: center;
+  }
+  .thick-green-border {
+    border-color: blue;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.smaller-image {
+    width: 800px;
+    max-width: 100%;
+ 	display: block;
+ 	height: auto;
+}
+.contact_holder{
+    width: 100px;
+    max-width: 100%;
+}
+.footer_icon{
+    width: 30px;
+    position: relative;
+}
+.footer{
+    right: 50px;
+}
+.ppp{
+    text-align: center;
+    font-family: lobster, monospace;
+    font-size: 1.2em;
+}
+.aze{
+    font-family: monospace;
+    font-size: 1.2em;
+    text-align: center;
+}
+

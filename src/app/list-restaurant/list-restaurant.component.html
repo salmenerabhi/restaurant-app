@@ -1,0 +1,40 @@
+<div *ngIf="alert"  class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Supprimé</strong> avec succés!
+  <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">close</button>
+</div>
+
+<div class="container">
+  <label>Saisir le nom du restaurant : </label>&nbsp; &nbsp;
+  <input class="form-group" [(ngModel)]="filter" type="text" size="50">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nom du restaurant</th>
+        <th scope="col">Adresse du restaurant</th>
+        <th scope="col">Tel</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    
+    <tbody *ngFor="let resto of liste">
+      
+      <tr *ngIf="resto.name.includes(filter)||filter==null">
+       
+          <td>{{resto.id}}</td>
+          <td>{{resto.name}}</td>
+          <td>{{resto.Adress}}</td>
+          <td>{{resto.tel}}</td>
+          <td>{{resto.email}}</td>
+          <td><a routerLink="/update/{{resto.id}}"><button class="fa fa-edit" style="font-size:30px;color:red"></button></a>&nbsp; &nbsp;
+            <button (click)="deleteResto(resto.id)" class="fa fa-trash-o" style="font-size:30px;color:red"></button>
+            <br></td>
+      </tr>
+    
+    </tbody>
+    
+  </table>
+</div>
+
+

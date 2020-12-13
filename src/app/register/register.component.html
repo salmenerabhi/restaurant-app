@@ -1,0 +1,63 @@
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>S'inscrire ici!!</h1>
+  </div>
+  <form #myForm="ngForm">
+      <div class="form-row">
+          <div class="col-md-6 mb-3">
+              <label for="firstname">Nom</label>
+              <input type="text" class="form-control" id="firstname" [(ngModel)]="user.firstname" #firstname="ngModel" name="firstname" required minlength="3" >
+              <div *ngIf="firstname.touched && firstname.errors">
+              <div class="alert alert-danger" *ngIf="firstname.errors.required">Entrer votre prenom.</div>
+              <div class="alert alert-danger" *ngIf="firstname.errors.minlength">firstname needs to have at least 3 caracters</div>
+              </div>
+          </div>
+        <div class="col-md-6 mb-3">
+          <label for="lastname">Prenom</label>
+          <input type="text" class="form-control" id="lastname" [(ngModel)]="user.lastname" #lastname="ngModel" name="lastname" required minlength="3">
+          <div *ngIf="lastname.touched && lastname.errors">
+              <div class="alert alert-danger" *ngIf="lastname.errors.required">Entrer votre nom</div>
+              <div class="alert alert-danger" *ngIf="lastname.errors.minlength">lastname needs to have at least 3 caracters</div>
+          </div>
+
+
+
+          
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" [(ngModel)]="user.email" #email="ngModel" name="email" required minlength="3">
+          <div *ngIf="email.touched && email.errors">
+              <div class="alert alert-danger" *ngIf="email.errors.required">Entrer votre addresse mail.</div>
+              <div class="alert alert-danger" *ngIf="email.errors.minlength">Votre addresse mail doit contenir au moins 3 caracteres</div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="address">Addresse</label>
+          <input type="text" class="form-control" id="address" [(ngModel)]="user.address" #address="ngModel" name="address" required minlength="3">
+          <div *ngIf="address.touched && address.errors">
+              <div class="alert alert-danger" *ngIf="address.errors.required">Entrer votre addresse.</div>
+              <div class="alert alert-danger" *ngIf="address.errors.minlength">Votre addresse doit contenir au moins 3 caracteres</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="mdp">Mot de passe</label>
+          <input type="password" class="form-control" id="mdp" [(ngModel)]="user.mdp" #mdp="ngModel" name="mdp" required minlength="8">
+          <div *ngIf="mdp.touched && mdp.errors">
+              <div class="alert alert-danger" *ngIf="mdp.errors.required">Entrer votre mot de passe.</div>
+              <div class="alert alert-danger" *ngIf="mdp.errors.minlength">Votre mot de passe doit contenir au moins 8 caracteres</div>
+          </div>
+        </div>
+
+        
+      
+
+      </div>
+  </form>
+  
+  <div class="alert alert-success" [hidden]="!show">utilisateur ajouté avec succés!</div>
+  <button class="btn btn-success float-right" (click)="add()" [disabled]="myForm.invalid">Creer compte</button>
+  </div>

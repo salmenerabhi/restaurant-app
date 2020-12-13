@@ -1,0 +1,20 @@
+
+<div class="col-md-3" *ngIf="resto.name.toLowerCase().includes(searchnameInput)|| searchnameInput==null">
+    <div class="card" style="width: 18rem;">
+        <img src="../../assets/pull.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{resto.name}}</h5>
+
+            <button class="btn btn-primary" *ngIf="isCollapsed" (click)="afficherplus()">Afficher plus</button>
+            <button class="btn btn-primary" *ngIf="!isCollapsed"(click)="afficherplus()">Afficher Moins</button>
+            <br><br><br>
+            <div *ngIf="!isCollapsed">
+                <p class="card-title">id: {{resto.id}}</p>
+                <p class="card-title">addresse: {{resto.Adress}}</p>
+                <p class="card-title">tel: {{resto.tel}}</p>
+                <p class="card-title">email: {{resto.email}}</p>
+                <br><br><br><br><br><br>
+            </div>       
+        </div>
+    </div>
+</div>
